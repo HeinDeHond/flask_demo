@@ -1,0 +1,13 @@
+<html>
+<head><title>{% block title %}Flask app{% endblock %}</title></head>
+<body>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+    <p>Menu:</p>
+    <ul>
+        <li><a href="{{ url_for('greet', name='Harbour')}}">{{ url_for('greet', name='Harbour')}}</a></li>
+        <li><a href="{{ url_for('items') }}">{{ url_for('items') }}</a></li>
+    </ul>
+</body>
+</html>

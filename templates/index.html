@@ -1,8 +1,14 @@
-<html>
-<head><title>Flask app</title></head>
-<body>
-<p>Go to <a href="{{ url_for('greet', name='Harbour')}}">{{ url_for('greet', name='Harbour')}}</a> and fix the error in the templates/greet.html file.</p>
+{% extends "base.html" %}
 
+{% block title %}Index page with a task{% endblock %}
 
-</body>
-</html>
+{% block content %}
+    <ul>
+        <li>Open index.html in your IDE and read</li>
+        <li>Change "greet.html" and "items.html" in order to extend base template.</li>
+        <li>Check that both "greet.html" and "items.html" still works 😊</li>
+        <li>Can you see a Menu on all pages now?</li>
+        <li>Add index page to the Menu 👾</li>
+    </ul>
+
+{% endblock %}
