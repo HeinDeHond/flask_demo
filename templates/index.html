@@ -4,9 +4,9 @@
 
 {% block content %}
     <ul>
-        <li>Open index.html in your IDE and read</li>
-        <li>Change "greet.html" and "items.html" in order to extend base template.</li>
-        <li>Check that both "greet.html" and "items.html" still works 😊</li>
+        <li>Go to <a href="{{ url_for('index', arg1='harbour') }}">{{ url_for('index', arg1='harbour') }}</a></li>
+        <li>Specify SECRET_KEY in app.py</li>
+        <li>Find invocation of "flash" in app.py and fix the message 😊</li>
         <li>Can you see a Menu on all pages now?</li>
         <li>Add index page to the Menu 👾</li>
     </ul>

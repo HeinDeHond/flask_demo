@@ -1,11 +1,15 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash
 
 app = Flask(__name__)
 items_storage = []
+app.config["SECRET_KEY"] = None  # any string should be okay
 
 
 @app.route("/")
 def index():
+    for arg_name in request.args:
+        arg_value = request.args[arg_name]  # noqa
+        flash(f"You give me {'Put arg_name here'}:{'Put arg_value here'} argument")
     return render_template("index.html")
 
 

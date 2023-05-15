@@ -1,6 +1,17 @@
 <html>
 <head><title>{% block title %}Flask app{% endblock %}</title></head>
 <body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+                {% for message in messages %}
+                <li><b>{{ message }}</b></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No messages!</p>
+        {% endif %}
+    {% endwith %}
     <div class="content">
         {% block content %}{% endblock %}
     </div>
